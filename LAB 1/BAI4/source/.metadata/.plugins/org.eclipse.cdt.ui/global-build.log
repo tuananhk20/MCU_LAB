@@ -1,0 +1,19 @@
+19:27:08 **** Incremental Build of configuration Debug for project EX4 ****
+make -j8 all 
+arm-none-eabi-gcc -o "EX4.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Admin\Desktop\LAB VXL\LAB 1\BAI4\source\EX4\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EX4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EX4.elf
+ 
+arm-none-eabi-size   EX4.elf 
+arm-none-eabi-objdump -h -S  EX4.elf  > "EX4.list"
+arm-none-eabi-objcopy  -O ihex  EX4.elf  "EX4.hex"
+arm-none-eabi-objcopy  -O binary  EX4.elf  "EX4.bin"
+   text	   data	    bss	    dec	    hex	filename
+   5280	     20	   1572	   6872	   1ad8	EX4.elf
+Finished building: default.size.stdout
+ 
+Finished building: EX4.hex
+Finished building: EX4.bin
+ 
+ 
+Finished building: EX4.list
+ 

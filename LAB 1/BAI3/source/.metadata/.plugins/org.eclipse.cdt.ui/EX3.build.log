@@ -1,0 +1,22 @@
+19:14:11 **** Incremental Build of configuration Debug for project EX3 ****
+make -j8 all 
+arm-none-eabi-gcc -o "EX3.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Admin\Desktop\LAB VXL\LAB 1\BAI3\source\EX3\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EX3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EX3.elf
+ 
+arm-none-eabi-size   EX3.elf 
+arm-none-eabi-objdump -h -S  EX3.elf  > "EX3.list"
+arm-none-eabi-objcopy  -O ihex  EX3.elf  "EX3.hex"
+arm-none-eabi-objcopy  -O binary  EX3.elf  "EX3.bin"
+   text	   data	    bss	    dec	    hex	filename
+   4916	     20	   1572	   6508	   196c	EX3.elf
+Finished building: default.size.stdout
+ 
+Finished building: EX3.hex
+Finished building: EX3.bin
+ 
+Finished building: EX3.list
+ 
+ 
+
+19:14:11 Build Finished. 0 errors, 0 warnings. (took 507ms)
+

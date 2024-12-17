@@ -1,0 +1,32 @@
+/*
+ * global.h
+ *
+ *  Created on: Dec 12, 2024
+ *      Author: Admin
+ */
+
+#ifndef INC_GLOBAL_H_
+#define INC_GLOBAL_H_
+
+#include "main.h"
+#include "main.h"
+#include "software_timer.h"
+
+#define BUT1 BUT1_Pin
+#define BUT2 BUT2_Pin
+#define BUT3 BUT3_Pin
+
+//init
+#define INIT 0
+
+//mode auto
+#define MOD_AUTO 1
+#define AUTO_RED 10
+#define AUTO_GREEN 11
+#define AUTO_YELLOW 12
+
+extern int TIME_RED
+extern int TIME_YELLOW
+extern int TIME_GREEN
+
+#endif /* INC_GLOBAL_H_ */

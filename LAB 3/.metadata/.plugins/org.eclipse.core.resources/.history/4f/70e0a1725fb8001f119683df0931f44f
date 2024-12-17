@@ -1,0 +1,15 @@
+/*
+ * fsm_automatic.h
+ *
+ *  Created on: Dec 12, 2024
+ *      Author: Admin
+ */
+
+#ifndef INC_FSM_AUTOMATIC_H_
+#define INC_FSM_AUTOMATIC_H_
+
+#include "button.h"
+#include "software_timer.h"
+#include "global.h"
+
+#endif /* INC_FSM_AUTOMATIC_H_ */

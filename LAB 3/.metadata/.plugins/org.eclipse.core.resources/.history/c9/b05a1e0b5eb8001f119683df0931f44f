@@ -1,0 +1,21 @@
+/*
+ * traffic_light.c
+ *
+ *  Created on: Dec 12, 2024
+ *      Author: Admin
+ */
+
+
+#include "traffic_light.h"
+
+void toggleLedRed(){
+	HAL_GPIO_TogglePin(GPIOA, LED_RED_Pin);
+}
+
+void toggleAllRed(){
+	HAL_GPIO_WritePin(GPIOA, YELLOWB_Pin | GREENB_Pin, GPIO_PIN_RESET);
+
+
+	HAL_GPIO_TogglePin(GPIOA, REDA);
+	HAL_GPIO_TogglePin(GPIOA, REDB);
+}

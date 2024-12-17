@@ -1,0 +1,22 @@
+/*
+ * fsm_automatic.c
+ *
+ *  Created on: Dec 12, 2024
+ *      Author: Admin
+ */
+
+#include "traffic_light.h"
+
+void fsm_automatic(){
+	switch(status){
+	case INIT:
+		status = RED_GREEN;
+		setTimer1(TIME_RED*1000);
+		setTimer2(TIME_GREEN*1000);
+		break;
+	case RED_GREEN:
+		display7SEG();
+		break;
+	}
+
+}

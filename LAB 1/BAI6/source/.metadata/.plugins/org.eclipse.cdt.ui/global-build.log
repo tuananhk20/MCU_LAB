@@ -1,0 +1,19 @@
+20:31:18 **** Incremental Build of configuration Debug for project EX6 ****
+make -j8 all 
+arm-none-eabi-gcc -o "EX6.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Admin\Desktop\LAB VXL\LAB 1\BAI6\source\EX6\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EX6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EX6.elf
+ 
+arm-none-eabi-size   EX6.elf 
+arm-none-eabi-objdump -h -S  EX6.elf  > "EX6.list"
+arm-none-eabi-objcopy  -O ihex  EX6.elf  "EX6.hex"
+   text	   data	    bss	    dec	    hex	filename
+   6304	     20	   1572	   7896	   1ed8	EX6.elf
+arm-none-eabi-objcopy  -O binary  EX6.elf  "EX6.bin"
+Finished building: default.size.stdout
+ 
+Finished building: EX6.hex
+Finished building: EX6.bin
+ 
+ 
+Finished building: EX6.list
+ 

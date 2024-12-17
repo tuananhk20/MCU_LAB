@@ -1,0 +1,19 @@
+/*
+ * global.h
+ *
+ *  Created on: Dec 12, 2024
+ *      Author: Admin
+ */
+
+#ifndef INC_GLOBAL_H_
+#define INC_GLOBAL_H_
+
+#include "main.h"
+#include "main.h"
+#include "software_timer.h"
+
+#define BUT1 BUT1_Pin
+#define BUT2 BUT2_Pin
+#define BUT3 BUT3_Pin
+
+#endif /* INC_GLOBAL_H_ */

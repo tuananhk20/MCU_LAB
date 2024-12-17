@@ -1,0 +1,15 @@
+/*
+ * fsm_automatic.c
+ *
+ *  Created on: Dec 12, 2024
+ *      Author: Admin
+ */
+
+#include "traffic_light.h"
+
+void fsm_automatic(){
+	switch(status){
+	case INIT:
+		status = RED_G
+	}
+}

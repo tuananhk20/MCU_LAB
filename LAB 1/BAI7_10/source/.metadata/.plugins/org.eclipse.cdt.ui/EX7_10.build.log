@@ -1,0 +1,29 @@
+20:57:03 **** Incremental Build of configuration Debug for project EX7_10 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:322:8: warning: 'clearNumberOnClock' defined but not used [-Wunused-function]
+  322 |   void clearNumberOnClock(int num) {
+      |        ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:89:8: warning: 'checkLed' defined but not used [-Wunused-function]
+   89 |   void checkLed(int num){
+      |        ^~~~~~~~
+arm-none-eabi-gcc -o "EX7_10.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Admin\Desktop\LAB VXL\LAB 1\BAI7_10\source\EX7_10\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EX7_10.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EX7_10.elf
+ 
+arm-none-eabi-size   EX7_10.elf 
+arm-none-eabi-objdump -h -S  EX7_10.elf  > "EX7_10.list"
+arm-none-eabi-objcopy  -O ihex  EX7_10.elf  "EX7_10.hex"
+arm-none-eabi-objcopy  -O binary  EX7_10.elf  "EX7_10.bin"
+   text	   data	    bss	    dec	    hex	filename
+   5128	     32	   1568	   6728	   1a48	EX7_10.elf
+Finished building: default.size.stdout
+ 
+Finished building: EX7_10.hex
+Finished building: EX7_10.bin
+ 
+ 
+Finished building: EX7_10.list
+ 
+
+20:57:05 Build Finished. 0 errors, 2 warnings. (took 2s.516ms)
+

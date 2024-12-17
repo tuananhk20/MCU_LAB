@@ -1,0 +1,24 @@
+08:23:29 **** Incremental Build of configuration Debug for project EX5 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
+arm-none-eabi-gcc -o "EX5.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Admin\Desktop\LAB VXL\LAB 2\EXERCISE5\SOURCE CODE\EX5\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EX5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EX5.elf
+ 
+arm-none-eabi-size   EX5.elf 
+arm-none-eabi-objdump -h -S  EX5.elf  > "EX5.list"
+arm-none-eabi-objcopy  -O ihex  EX5.elf  "EX5.hex"
+arm-none-eabi-objcopy  -O binary  EX5.elf  "EX5.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7972	     20	   1668	   9660	   25bc	EX5.elf
+Finished building: default.size.stdout
+ 
+Finished building: EX5.hex
+Finished building: EX5.bin
+ 
+ 
+Finished building: EX5.list
+ 
+
+08:23:31 Build Finished. 0 errors, 0 warnings. (took 2s.249ms)
+
